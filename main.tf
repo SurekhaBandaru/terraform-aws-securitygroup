@@ -1,5 +1,5 @@
 resource "aws_security_group" "main" { # security group id inside attached vpc (vpic id)
-  name        = var.sg_name
+  name        = "${var.project}-${var.environment}-${var.sg_name}"
   description = var.sg_description
   vpc_id      = var.vpc_id
 
